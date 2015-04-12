@@ -1,0 +1,4 @@
+.idea
+*.pyc
+tango_with_django_project/settings.py
+*~
