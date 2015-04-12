@@ -19,6 +19,10 @@ def about(request):
     context_dict = {'boldmessage': "This is about page"}
     return render(request, 'demo/about.html', context_dict)
 
+def account(request):
+    context_dict = {'fd': 'fd'}
+    return render(request, 'demo/account.html', context_dict)
+
 class CustomSignupView(SignupView):
     # here we add some context to the already existing context
     def get_context_data(self, **kwargs):

@@ -1,27 +1,23 @@
 {% extends 'demo/index.html' %}
-{% block sidebar %}
-{% endblock sidebar %}
-{% block container %}
-<div class="container">
-    <div class="row profile">
+{% load staticfiles %}
+{% block jumbo_head %}
 		<div class="col-md-3">
+        <p class="pull-right visible-xs">
+            <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Toggle nav</button>
+          </p>
 			<div class="profile-sidebar">
-{% block sidebar-button %}
-{% endblock sidebar-button %}
-{% block jumbotron %}
-{% endblock jumbotron %}
-        <!-- SIDEBAR USERPIC -->
+                <!-- SIDEBAR USERPIC -->
 				<div class="profile-userpic">
-					<img src="http://keenthemes.com/preview/metronic/theme/assets/admin/pages/media/profile/profile_user.jpg" class="img-responsive" alt="">
+					<img src="{% static "images/question.png" %}" class="img-responsive" alt="">
 				</div>
 				<!-- END SIDEBAR USERPIC -->
 				<!-- SIDEBAR USER TITLE -->
 				<div class="profile-usertitle">
 					<div class="profile-usertitle-name">
-						Marcus Doe
+						{{ user.username }}
 					</div>
 					<div class="profile-usertitle-job">
-						Developer
+						Nobody
 					</div>
 				</div>
 				<!-- END SIDEBAR USER TITLE -->
@@ -58,14 +54,81 @@
 				</div>
 				<!-- END MENU -->
 			</div>
-		</div>
-		<div class="col-md-9">
+            </div>
+    <div class="col-md-9">
             <div class="profile-content">
-			   Some user related content goes here...
+                dsldshfjdsfhjkdsfh
+                dfsjhfkjdsahdfskjdfs
+                fdsmsadfhksadhfdfsahk
+                dshjkhdkjfs
+                fdsjkdfjskldfs
+                fdsjksdfkjfdshkjfhd
+                dfsjhfdskjdfhskdfs
+                fdjkjfsufeiuyueiw
+                dsjfgdjhgdjhgdfs
+                dsldshfjdsfhjkdsfh
+                dfsjhfkjdsahdfskjdfs
+                fdsmsadfhksadhfdfsahk
+                dshjkhdkjfs
+                fdsjkdfjskldfs
+                fdsjksdfkjfdshkjfhd
+                dfsjhfdskjdfhskdfs
+                fdjkjfsufeiuyueiw
+                dsjfgdjhgdjhgdfs
+                dsldshfjdsfhjkdsfh
+                dfsjhfkjdsahdfskjdfs
+                fdsmsadfhksadhfdfsahk
+                dshjkhdkjfs
+                fdsjkdfjskldfs
+                fdsjksdfkjfdshkjfhd
+                dfsjhfdskjdfhskdfs
+                fdjkjfsufeiuyueiw
+                dsjfgdjhgdjhgdfs
+                dsldshfjdsfhjkdsfh
+                dfsjhfkjdsahdfskjdfs
+                fdsmsadfhksadhfdfsahk
+                dshjkhdkjfs
+                fdsjkdfjskldfs
+                fdsjksdfkjfdshkjfhd
+                dfsjhfdskjdfhskdfs
+                fdjkjfsufeiuyueiw
+                dsjfgdjhgdjhgdfs
+                dsldshfjdsfhjkdsfh
+                dfsjhfkjdsahdfskjdfs
+                fdsmsadfhksadhfdfsahk
+                dshjkhdkjfs
+                fdsjkdfjskldfs
+                fdsjksdfkjfdshkjfhd
+                dfsjhfdskjdfhskdfs
+                fdjkjfsufeiuyueiw
+                dsjfgdjhgdjhgdfs
             </div>
 		</div>
-	</div>
-</div>
-{% endblock container %}
+{% endblock jumbo_head %}
+{% block toggle %}
+{% endblock toggle %}
+{% block carousel %}
+{% endblock carousel %}
+{% block jumbo_end %}
+{% endblock jumbo_end %}
 {% block row %}
 {% endblock row %}
+{% block sidebar %}
+            <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
+          <div class="list-group">
+            <a href="#" class="list-group-item active">Link</a>
+            <a href="#" class="list-group-item">Link</a>
+            <a href="#" class="list-group-item">Link</a>
+            <a href="#" class="list-group-item">Link</a>
+            <a href="#" class="list-group-item">Link</a>
+            <a href="#" class="list-group-item">Link</a>
+            <a href="#" class="list-group-item">Link</a>
+            <a href="#" class="list-group-item">Link</a>
+            <a href="#" class="list-group-item">Link</a>
+            <a href="#" class="list-group-item">Link</a>
+          </div>
+        </div><!--/span-->
+{% endblock sidebar %}
+{% block row_tail %}
+    </div>
+{% endblock row_tail %}

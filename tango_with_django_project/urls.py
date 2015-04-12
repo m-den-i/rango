@@ -9,6 +9,7 @@ urlpatterns = patterns('',
                        url(r'^admin/', include(admin.site.urls)),
                        url(r'^$', include('rango.urls')),
                        url(r'^accounts/', include('allauth.urls')),
+                       url(r'^profile/', views.account, name='account_user'),
                        )
 if not settings.DEBUG:
         urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

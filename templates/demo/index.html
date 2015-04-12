@@ -54,7 +54,7 @@
                   {% if user.is_authenticated %}
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{ user.username }} <b class="caret"></b></a>
                   <ul class="dropdown-menu">
-                    <li><a href="#">Account</a></li>
+                    <li><a href="{% url 'account_user' %}">Account</a></li>
                     <li><a href="#">Account Settings</a></li>
                     <li class="divider"></li>
                     <li class="dropdown-header">Nav header</li>
@@ -76,20 +76,26 @@
     </div><!-- /.navbar -->
 {% endblock navbar-header %}
 
-{% block container %}
+
     <div class="container">
+
+{% block row_head %}
       <div class="row row-offcanvas row-offcanvas-right">
-
         <div class="col-xs-12 col-sm-9">
+{% endblock row_head %}
 
-            {% block sidebar-button %}
+{% block toggle %}
           <p class="pull-right visible-xs">
             <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Toggle nav</button>
           </p>
-            {% endblock sidebar-button %}
+{% endblock toggle %}
 
-            {% block jumbotron %}
+
+{% block jumbo_head %}
           <div class="jumbotron">
+{% endblock jumbo_head %}
+
+{% block carousel %}
             <div id="myCarousel" class="carousel slide" data-ride="carousel">
                 <!-- Indicators -->
                 <ol class="carousel-indicators">
@@ -142,10 +148,12 @@
                   <span class="sr-only">Next</span>
                 </a>
               </div>
+{% endblock carousel %}
+{% block jumbo_end %}
           </div>
-            {% endblock jumbotron %}
+{% endblock jumbo_end %}
 
-            {% block row %}
+{% block row %}
           <div class="row">
             <div class="col-6 col-sm-6 col-lg-4">
               <h2>Heading</h2>
@@ -178,35 +186,24 @@
               <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
             </div><!--/span-->
           </div><!--/row-->
-                {% endblock row %}
-        </div><!--/span-->
+{% endblock row %}
+ {% block col_xs_end %}
+        </div>
+{% endblock col_xs_end %}
+
 {% block sidebar %}
-        <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
-          <div class="list-group">
-            <a href="#" class="list-group-item active">Link</a>
-            <a href="#" class="list-group-item">Link</a>
-            <a href="#" class="list-group-item">Link</a>
-            <a href="#" class="list-group-item">Link</a>
-            <a href="#" class="list-group-item">Link</a>
-            <a href="#" class="list-group-item">Link</a>
-            <a href="#" class="list-group-item">Link</a>
-            <a href="#" class="list-group-item">Link</a>
-            <a href="#" class="list-group-item">Link</a>
-            <a href="#" class="list-group-item">Link</a>
-          </div>
-        </div><!--/span-->
+
 {% endblock sidebar %}
+{% block row_tail %}
       </div><!--/row-->
+{% endblock row_tail %}
 
       <hr>
-
       <footer>
         <p>&copy; Company 2014</p>
       </footer>
-
     </div><!--/.container-->
 
-{% endblock container %}
 {% block player %}
     <div class="sm2-bar-ui full-width fixed dark-text textured">
 
